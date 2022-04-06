@@ -1,0 +1,23 @@
+{
+  "name": "quiz_model",
+  "version": "1.0.0",
+  "description": "small quiz model for shop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JayBhakhar/quiz_model.git"
+  },
+  "author": "Jay Bhakhar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JayBhakhar/quiz_model/issues"
+  },
+  "homepage": "https://github.com/JayBhakhar/quiz_model#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3"
+  }
+}
