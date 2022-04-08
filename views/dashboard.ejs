@@ -1,3 +1,57 @@
 <%- include("partials/header"); -%>
-<p> "Hello World !!" </p>
-<%- include("partials/footer"); -%>
+
+    <body>
+        <div class="container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Budget</th>
+                        <th scope="col">Contact Number</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% quiz_models.forEach(function(quiz_model){ %>
+                        <tr>
+                            <td>
+                                <%= quiz_model.name %>
+                            </td>
+                            <td>
+                                <%= quiz_model.budget %>
+                            </td>
+                            <td>
+                                <%= quiz_model.number %>
+                            </td>                            
+                            <td>
+                                <!-- Button to Open the Modal -->
+                                <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal">
+                                    Delete
+                                </button>
+                            </td>
+                        </tr>
+                        <!-- The Modal -->
+                        <div class="modal" id="deleteModal">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title"> Are you sure ?</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                        <a class="btn btn-danger" href="dashboard/delete/<%= quiz_model._id %>"> Delete
+                                        </a>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Cancel
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <%- include("partials/footer"); -%>
+                            <% }) %>
+                </tbody>
+            </table>

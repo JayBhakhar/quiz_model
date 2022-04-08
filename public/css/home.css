@@ -1,0 +1,25 @@
+html,
+body {
+  height: 100%;
+}
+
+html {
+  display: table;
+  margin: auto;
+}
+
+body {
+  background-color: rgb(34, 172, 80);
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.container {
+  background-color: rgb(184, 50, 50);
+  color: #ddd;
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
